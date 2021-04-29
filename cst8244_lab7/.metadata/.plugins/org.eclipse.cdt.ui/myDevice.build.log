@@ -1,0 +1,7 @@
+20:10:49 **** Build of configuration x86_64-debug for project myDevice ****
+make -j8 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/myDevice.d,-MT,build/x86_64-debug/src/myDevice.o -o build/x86_64-debug/src/myDevice.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/myDevice.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/myDevice   build/x86_64-debug/src/myDevice.o  
+
+20:10:49 Build Finished (took 210ms)
+

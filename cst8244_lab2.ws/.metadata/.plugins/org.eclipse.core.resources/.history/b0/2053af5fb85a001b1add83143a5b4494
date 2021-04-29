@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << "Hello World from QNX Neutrino RTOS!!!" << endl; // prints Hello World!!!
+	cout << "@author Justin Macwan(macw0009@algonquinlive.com)" << endl;
+	cout << "I am pretty good at soccer" << endl;
+	cout << endl;
+
+	cout << "My PID is: " << getpid() << endl;
+	cout << "My Parent's PID is: " << getpid() << endl;
+	cout << endl;
+
+	cout << "Enter 'q' to quit: " << endl;
+	getchar();
+	return 0;
+}

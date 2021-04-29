@@ -1,0 +1,7 @@
+22:38:50 **** Clean-only build of configuration x86_64-debug for project thread-waker ****
+make -j8 clean 
+rm -fr build/x86_64-debug
+22:39:04 **** Build of configuration x86_64-debug for project thread-waker ****
+make -j8 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/thread-waker.d,-MT,build/x86_64-debug/src/thread-waker.o -o build/x86_64-debug/src/thread-waker.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/thread-waker.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/thread-waker   build/x86_64-debug/src/thread-waker.o  

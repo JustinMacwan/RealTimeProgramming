@@ -1,0 +1,6 @@
+12:46:36 **** Incremental Build of configuration x86_64-debug for project partB_sigproc ****
+make -j8 all 
+make: Nothing to be done for 'all'.
+
+12:46:36 Build Finished (took 75ms)
+

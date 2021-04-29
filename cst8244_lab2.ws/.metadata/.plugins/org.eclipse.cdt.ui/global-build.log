@@ -1,0 +1,7 @@
+15:13:00 **** Build of configuration x86_64-debug for project my_first_project ****
+make -j8 all 
+qcc -lang-c++ -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/my_first_project.d,-MT,build/x86_64-debug/src/my_first_project.o -o build/x86_64-debug/src/my_first_project.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/my_first_project.cpp
+qcc -lang-c++ -Vgcc_ntox86_64 -o build/x86_64-debug/my_first_project   build/x86_64-debug/src/my_first_project.o  
+15:13:16 **** Incremental Build of configuration x86_64-debug for project my_first_project ****
+make -j8 all 
+make: Nothing to be done for 'all'.

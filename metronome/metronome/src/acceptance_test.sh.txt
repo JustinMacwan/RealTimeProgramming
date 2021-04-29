@@ -1,0 +1,269 @@
+echo "*********************************************************************\n"
+echo "Unit Test [a]\n"
+echo "./metronome\n"
+echo "Expected: usage message and process terminates (ungracefully).\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+./metronome
+
+sleep 4
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [b]\n"
+echo "./metronome 120 2 4 &\n"
+echo "Expected: [metronome: 120 beats/min, time signature 2/4, secs-per-interval: 0.25, nanoSecs 250000000]\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+./metronome 120 2 4 &
+
+sleep 9
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [c]\n"
+echo "cat /dev/local/metronome\n"
+echo "Expected: [metronome: 120 beats/min, time signature 2/4, secs-per-interval: 0.25, nanoSecs 250000000]\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [d]\n"
+echo "cat /dev/local/metronome-help\n"
+echo "Expected: information regarding the metronome resmgr’s API, as seen above.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat /dev/local/metronome-help
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [e]\n"
+echo "echo set 100 2 4 > /dev/local/metronome\n"
+echo "Expected: metronome regmgr changes settings to: 100 bpm in 2/4 time; run-time behaviour of metronome changes to 100 bpm in 2/4 time.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo set 100 2 4 > /dev/local/metronome
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [f]\n"
+echo "cat /dev/local/metronome\n"
+echo "Expected: [metronome: 100 beats/min, time signature 2/4, secs-per- interval: 0.30, nanoSecs: 300000000].\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [g]\n"
+echo "echo set 200 5 4 > /dev/local/metronome\n"
+echo "Expected: metronome regmgr changes settings to: 200 bpm in 5/4 time.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo set 200 5 4 > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [h]\n"
+echo "cat /dev/local/metronome\n"
+echo "Expected: [metronome: 200 beats/min, time signature 5/4, secs-per- interval: 0.15, nanoSecs: 150000000.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo set 200 5 4 > /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [i]\n"
+echo "echo stop > /dev/local/metronome\n"
+echo "Expected: metronome stops running; metronome resmgr is still running as a process: pidin | grep metronome.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo stop > /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [j]\n"
+echo "echo start > /dev/local/metronome\n"
+echo "Expected: metronome starts running again at 200 bpm in 5/4 time, which is the last setting; metronome resmgr is still running as a process: pidin | grep metronome.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo start > /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [k]\n"
+echo "cat /dev/local/metronome\n"
+echo "Expected: metronome starts running again at 200 bpm in 5/4 time, which is the last setting; metronome resmgr is still running as a process: pidin | grep metronome.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [l]\n"
+echo "echo stop > /dev/local/metronome\n"
+echo "Expected: metronome stops running; metronome resmgr is still running as a process: pidin | grep metronome.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo stop > /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [m]\n"
+echo "echo stop > /dev/local/metronome\n"
+echo "Expected: metronome remains stopped; metronome resmgr is still running as a process: pidin | grep metronome.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo stop > /dev/local/metronome
+
+sleep 6
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [n]\n"
+echo "echo start > /dev/local/metronome\n"
+echo "Expected: metronome starts running again at 200 bpm in 5/4 time, which is the last setting.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo start > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [o]\n"
+echo "echo start > /dev/local/metronome\n"
+echo "Expected: metronome is still running at 200 bpm in 5/4 time, which is the last setting.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo start > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [p]\n"
+echo "cat start > /dev/local/metronome\n"
+echo "Expected: [metronome: 200 beats/min, time signature 5/4, secs-per- interval: 0.15, nanoSecs: 150000000].\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat start > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [q]\n"
+echo "echo pause 3 > /dev/local/metronome\n"
+echo "Expected: metronome continues on next beat (not next measure)..\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo pause 3 > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [r]\n"
+echo "echo pause 10 > /dev/local/metronome\n"
+echo "Expected: properly formatted error message, and metronome continues to run.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo pause 10 > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [s]\n"
+echo "echo bogus > /dev/local/metronome\n"
+echo "Expected: properly formatted error message, and metronome continues to run.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo bogus > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [t]\n"
+echo "echo set 120 2 4 > /dev/local/metronome\n"
+echo "Expected: 1 measure per second. I will use this unit-test to verify the correct cadence of your metronome.\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo set 120 2 4 > /dev/local/metronome
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [u]\n"
+echo "cat /dev/local/metronome\n"
+echo "Expected: [metronome: 120 beats/min, time signature 2/4, secs-per-interval: 0.25, nanoSecs: 250000000]\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat /dev/local/metronome
+
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [v]\n"
+echo "cat /dev/local/metronome-help\n"
+echo "Expected: information regarding the metronome resmgr’s API, as seen above\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+cat /dev/local/metronome-help
+
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [w]\n"
+echo "echo Writes-Not-Allowed > /dev/local/metronome-help\n"
+echo "Expected: properly formatted error message, and metronome continues to run\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo Writes-Not-Allowed > /dev/local/metronome-help
+
+
+sleep 7
+
+echo "\n"
+echo "*********************************************************************\n"
+echo "Unit Test [w]\n"
+echo "echo quit > /dev/local/metronome && pidin | grep metronome\n"
+echo "Expected: metronome gracefully terminates\n"
+echo "*********************************************************************\n"
+echo "Output: \n"
+echo quit > /dev/local/metronome && pidin | grep metronome
+
+
+sleep 7
+
+
+
+
+

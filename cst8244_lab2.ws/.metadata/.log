@@ -1,0 +1,139 @@
+!SESSION 2021-01-19 18:41:55.915 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.equinox.registry 2 0 2021-01-19 18:41:58.589
+!MESSAGE The extensions and extension-points from the bundle "com.qnx.doc.screen" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2021-01-19 18:41:58.597
+!MESSAGE The extensions and extension-points from the bundle "com.qnx.doc.screen.wfdcfg" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2021-01-19 18:41:58.613
+!MESSAGE The extensions and extension-points from the bundle "com.qnx.doc.video_capture" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-19 18:42:44.708
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-19 18:42:44.713
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-19 18:42:44.717
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-19 18:42:44.721
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-19 18:42:44.725
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-01-19 18:42:46.672
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-01-19 18:42:46.678
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-01-19 18:43:55.045
+!MESSAGE Indexed 'my_first_project' (1 sources, 98 headers) in 2.84 sec: 23,364 declarations; 45,551 references; 0 unresolved inclusions; 0 syntax errors; 56 unresolved names (0.081%)
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2021-01-19 18:45:41.621
+!MESSAGE Could not acquire INavigatorContentService: Project Explorer not found.
+
+!ENTRY com.qnx.tools.ide.qde.debug.ui 4 -1 2021-01-19 19:23:08.813
+!MESSAGE No target connection, please create a connection first
+!STACK 1
+org.eclipse.core.runtime.CoreException: No target connection, please create a connection first
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.checkConnectionStatus(QDELaunchConfigurationDelegate.java:547)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDELaunchConfigurationDelegate.launch(QDELaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 4 0 2021-01-19 19:23:08.813
+!MESSAGE No target connection, please create a connection first
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.ui 4 0 2021-01-19 19:23:08.813
+!MESSAGE No target connection, please create a connection first
+
+!ENTRY org.eclipse.ui 4 4 2021-01-19 19:24:36.353
+!MESSAGE Plugin com.qnx.tools.ide.target.qconn.ui, extension org.eclipse.launchbar.ui.launchTargetTypeUI, id com.qnx.tools.ide.target.qconn: Unknown extension tag found: launchTargetTypeUI
+
+!ENTRY org.eclipse.ui 4 4 2021-01-19 19:24:36.357
+!MESSAGE Plugin com.qnx.tools.ide.target.serial.ui, extension org.eclipse.launchbar.ui.launchTargetTypeUI, id com.qnx.tools.ide.target.serial.core.connectionType: Unknown extension tag found: launchTargetTypeUI
+
+!ENTRY org.eclipse.debug.core 4 125 2021-01-19 19:47:07.467
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:227)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:748)
+!SESSION 2021-01-20 14:59:56.753 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:00:33.604
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:00:33.610
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:00:33.615
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:00:33.619
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:00:33.623
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-01-20 15:00:38.395
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-01-20 15:00:38.405
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+!SESSION 2021-01-20 15:10:39.725 -----------------------------------------------
+eclipse.buildId=7.0.4
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-01-20 15:10:45.041
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:10:47.006
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:10:47.012
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:10:47.017
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:10:47.023
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-01-20 15:10:47.029
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-01-20 15:10:53.046
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2021-01-20 15:10:53.058
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
